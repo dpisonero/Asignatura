@@ -1,6 +1,10 @@
 import {DrizzleContext} from "@drizzle/react-plugin";
-
 import '../css/App.css';
+import Header from './Header';
+import Evaluaciones from './Evaluaciones';
+import Alumnos from './Alumnos';
+import Calificaciones from './Calificaciones';
+import MisCosas from './MisCosas';
 
 function App() {
   return (
@@ -14,9 +18,11 @@ function App() {
 
               return (
                   <div className="App">
-                      <header className="App-header">
-                          <h1>P3 - Asignatura</h1>
-                      </header>
+                      <Header         drizzle={drizzle} drizzleState={drizzleState}/>
+                      <Evaluaciones   drizzle={drizzle} drizzleState={drizzleState}/>
+                      <Alumnos        drizzle={drizzle} drizzleState={drizzleState}/>
+                      <Calificaciones drizzle={drizzle} drizzleState={drizzleState}/>
+                      <MisCosas       drizzle={drizzle} drizzleState={drizzleState}/>
                   </div>
               ) ;
           }}
