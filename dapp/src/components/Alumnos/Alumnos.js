@@ -2,6 +2,7 @@ import {newContextComponents} from "@drizzle/react-components";
 
 import AlumnosHead from "./AlumnosHead";
 import AlumnosBody from "./AlumnosBody";
+import Automatricular from "./Automatricular";
 
 const {ContractData} = newContextComponents;
 
@@ -23,6 +24,9 @@ const Alumnos = (props) => (
                 </table>
             )}
         />
+
+        <Automatricular drizzle={props.drizzle}
+                   drizzleState={props.drizzleState} />
     </section>
 );
 
