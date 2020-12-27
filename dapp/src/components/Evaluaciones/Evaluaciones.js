@@ -1,6 +1,7 @@
 import {newContextComponents} from "@drizzle/react-components";
 import EvaluacionesHead from "./EvaluacionesHead";
 import EvaluacionesBody from "./EvaluacionesBody";
+import CrearEvaluacion from "./CrearEvaluacion";
 const {ContractData} = newContextComponents;
 
 const Evaluaciones = (props) => (
@@ -21,6 +22,9 @@ const Evaluaciones = (props) => (
                 </table>
             )}
         />
+
+        <CrearEvaluacion drizzle={props.drizzle}
+                        drizzleState={props.drizzleState} />
     </section>
 );
 
