@@ -6,7 +6,7 @@ import Asignatura from './contracts/Asignatura.json'
 const options = {
     contracts: [ Asignatura ],
     polls: {
-        accounts:3000,
+        accounts: 3000,
     },
     web3: {
         fallback: {
