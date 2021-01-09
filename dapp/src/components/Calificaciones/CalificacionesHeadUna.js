@@ -1,4 +1,4 @@
-const CalificacionesHeadUna = ({evaluacionesLength}) => {
+const CalificacionesHeadUna = () => {
 
     let thead = [];
 
