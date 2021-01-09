@@ -2,6 +2,8 @@ import {newContextComponents} from "@drizzle/react-components";
 import CalificacionesHead from "./CalificacionesHead";
 import CalificacionesBody from "./CalificacionesBody";
 import Calificar from "./Calificar";
+import CalificacionesHeadUna from "./CalificacionesHeadUna";
+import CalificacionesBodyUna from "./CalificacionesBodyUna";
 
 const {ContractData} = newContextComponents;
 
@@ -30,6 +32,26 @@ const Calificaciones = (props) => (
 
         <Calificar drizzle={props.drizzle}
                    drizzleState={props.drizzleState} />
+
+       <h3>Todas las calificaciones de una evaluación</h3>
+
+        <ContractData drizzle={props.drizzle}
+                      drizzleState={props.drizzleState}
+                      contract={"Asignatura"}
+                      method={"matriculasLength"}
+                      render={ml => <ContractData
+                          drizzle={props.drizzle}
+                          drizzleState={props.drizzleState}
+                          contract={"Asignatura"}
+                          method={"evaluacionesLength"}
+                          render={el => <table>
+                              <CalificacionesHeadUna/>
+                              <CalificacionesBodyUna drizzle={props.drizzle}
+                                                  drizzleState={props.drizzleState}
+                                                  matriculasLength={ml}/>
+                          </table>}
+                      />}
+        />
     </section>
 );
 
